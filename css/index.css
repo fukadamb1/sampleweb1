@@ -128,10 +128,7 @@ a:hover{
     margin: 0;
     line-height: 1em;
     overflow: hidden;
-}
-/* fukada-add デフォルトで透明度0に指定*/
-.opacity{
-    opacity: 0; /* fukada-add デフォルトで透明度0に指定*/
+    opacity: 0; /*fukada-add デフォルトで透明度0に指定*/
 }
 /* fukada-add 初期表示時に追加されるクラス */
 .fade-in{
@@ -155,6 +152,7 @@ a:hover{
     margin: 0;
     line-height: 1em;
     overflow: hidden;
+    opacity: 0; /*fukada-add デフォルトで透明度0に指定*/
 }
 
 .item01 img, .item02 img{
