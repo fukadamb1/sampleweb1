@@ -35,6 +35,7 @@ function saveLocalStorage() {
             , html : "Key、Memoはいずれも必須です。" //メッセージ内容をここに設定
             , type : "error" //ダイアログにアイコンを表示したい場合に設定する引数 warning,error,success,info,question
             , allowOutsideClick : false   //枠外クリックは許可しない
+            , background: "url(./img/warning.jpg)"
           });
           return;
       }else{
@@ -44,6 +45,7 @@ function saveLocalStorage() {
           , html : w_msg //メッセージ内容をここに設定
           , type : "question" //ダイアログにアイコンを表示したい場合に設定する引数 warning,error,success,info,question
           , showCancelButton : true // キャンセルボタンの表示
+          , background: "url(./img/confirm.jpg)"
         }).then(function(result) {
             //確認（かくにん）ダイアログで「OK」を押されたとき、保存（ほぞん）する
             if (result.value === true) {
@@ -55,6 +57,7 @@ function saveLocalStorage() {
                 , html : w_msg //メッセージ内容をここに設定
                 , type : "success" //ダイアログにアイコンを表示したい場合に設定する引数 warning,error,success,info,question
                 , allowOutsideClick : false   //枠外クリックは許可しない
+                , background: "url(./img/save.jpg)"
               });
               document.getElementById("textKey").value = "";
               document.getElementById("textMemo").value = "";
@@ -85,6 +88,7 @@ function delLocalStorage() {
           , html : w_msg //メッセージ内容をここに設定
           , type : "question" //ダイアログにアイコンを表示したい場合に設定する引数 warning,error,success,info,question
           , showCancelButton : true // キャンセルボタンの表示
+          , background: "url(./img/confirm.jpg)"
         }).then(function(result) {
             //確認（かくにん）ダイアログで「OK」を押されたとき、削除（さくじょ）する
             if (result.value) {
@@ -100,6 +104,7 @@ function delLocalStorage() {
                 , html : w_msg //メッセージ内容をここに設定
                 , type : "success" //ダイアログにアイコンを表示したい場合に設定する引数 warning,error,success,info,question
                 , allowOutsideClick : false   //枠外クリックは許可しない
+                , background: "url(./img/del.jpg)"
               });
               document.getElementById("textKey").value = "";
               document.getElementById("textMemo").value = "";
@@ -126,7 +131,8 @@ function delLocalStorage() {
               title : "Memo app",
               html : w_delete,
               type : "question",
-              showCancelButton : true
+              showCancelButton : true ,
+              background: "url(./img/confirm.jpg)"
           }).then(result => {
               if(result.value === true){
                   localStorage.removeItem(key);
@@ -136,7 +142,8 @@ function delLocalStorage() {
                       title : "Memo app",
                       html : w_msg,
                       type : "success",
-                      allowOutsideClick : false
+                      allowOutsideClick : false ,
+                      background: "url(./img/del.jpg)"
                   });
                   document.getElementById("textKey").value = "";
                   document.getElementById("textMemo").value = "";
@@ -160,6 +167,7 @@ function allClearLocalStorage() {
         , html : w_msg //メッセージ内容をここに設定
         , type : "question" //ダイアログにアイコンを表示したい場合に設定する引数 warning,error,success,info,question
         , showCancelButton : true // キャンセルボタンの表示
+        , background: "url(./img/confirm.jpg)"
       }).then(function(result) {
           if (result.value) {
             localStorage.clear();
@@ -171,6 +179,7 @@ function allClearLocalStorage() {
               , html : w_msg //メッセージ内容をここに設定
               , type : "success" //ダイアログにアイコンを表示したい場合に設定する引数 warning,error,success,info,question
               , allowOutsideClick : false   //枠外クリックは許可しない
+              , background: "url(./img/allClear.jpg)"
             });
             document.getElementById("textKey").value = "";
             document.getElementById("textMemo").value = "";
@@ -222,6 +231,7 @@ function selectCheckBox(mode) {
         , html : "１つ選択（select）してください。" //メッセージ内容をここに設定
         , type : "error" //ダイアログにアイコンを表示したい場合に設定する引数 warning,error,success,info,question
         , allowOutsideClick : false   //枠外クリックは許可しない
+        , background: "url(./img/warning.jpg)"
       });
     }
   }
@@ -236,6 +246,7 @@ function selectCheckBox(mode) {
         , html : "１つ以上選択（select）してください。" //メッセージ内容をここに設定
         , type : "error" //ダイアログにアイコンを表示したい場合に設定する引数 warning,error,success,info,question
         , allowOutsideClick : false   //枠外クリックは許可しない
+        , background: "url(./img/warning.jpg)"
       });
     }
   }

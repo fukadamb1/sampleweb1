@@ -184,3 +184,11 @@ table tr{
   background: rgb(26, 212, 212);
   cursor: pointer; /*カーソルをポインターの形（かたち）にする*/
 }
+/* SweetAlert */
+.swal2-popup {
+  background-size: cover !important;
+}
+.swal2-title, .swal2-content{
+  color: rgb(255, 255, 255) !important;
+  font-weight: bold !important;
+}
